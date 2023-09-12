@@ -1,4 +1,5 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:hng_internship_mobile_track_stage_1/views/pages/dashboard/githubPage.dart';
 import 'package:hng_internship_mobile_track_stage_1/views/pages/dashboard/homePage.dart';
 
 import 'model/utilities/imports/generalImport.dart';
@@ -19,6 +20,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        initialRoute: '/', // Optional: Define the initial route
+        routes: {
+          '/githubPage': (context) => const GitHubPage(),
+        },
         title: 'Flutter Demo',
         locale: DevicePreview.locale(context),
         builder: DevicePreview.appBuilder,
@@ -27,7 +32,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        // home: const HomePage());
         home: const HomePage());
+    // home: const GitHubPage());
   }
 }

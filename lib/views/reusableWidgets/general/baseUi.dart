@@ -26,9 +26,6 @@ class BaseUi extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<BaseModel>.reactive(
         viewModelBuilder: () => BaseModel(),
-        onViewModelReady: (model) async {
-          model.openDrawer();
-        },
         onDispose: (model) {},
         disposeViewModel: false,
         builder: (context, model, child) {
@@ -95,7 +92,8 @@ class BaseUi extends StatelessWidget {
                                       image: DecorationImage(
                                           fit: BoxFit.fill,
                                           image: AssetImage(
-                                              'image/profile_picture.png'))),
+                                            'images/profileImage.png',
+                                          ))),
                                   child: Stack(
                                     children: children,
                                   ),
