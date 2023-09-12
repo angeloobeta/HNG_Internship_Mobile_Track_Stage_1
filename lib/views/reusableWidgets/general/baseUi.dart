@@ -92,7 +92,7 @@ class BaseUi extends StatelessWidget {
                                       image: DecorationImage(
                                           fit: BoxFit.fill,
                                           image: AssetImage(
-                                            'images/profileImage.png',
+                                            'lib/assets/images/profileImage.png',
                                           ))),
                                   child: Stack(
                                     children: children,

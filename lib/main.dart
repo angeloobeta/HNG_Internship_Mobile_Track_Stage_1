@@ -1,4 +1,3 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:hng_internship_mobile_track_stage_1/views/pages/dashboard/githubPage.dart';
 import 'package:hng_internship_mobile_track_stage_1/views/pages/dashboard/homePage.dart';
 
@@ -6,10 +5,11 @@ import 'model/utilities/imports/generalImport.dart';
 
 void main() {
   runApp(
-    DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) => const MyApp(), // Wrap your app
-    ),
+    // DevicePreview(
+    //   enabled: !kReleaseMode,
+    //   builder: (context) =>
+    const MyApp(), // Wrap your app
+    // ),
   );
 }
 
@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
           '/githubPage': (context) => const GitHubPage(),
         },
         title: 'Flutter Demo',
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
+        // locale: DevicePreview.locale(context),
+        // builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
